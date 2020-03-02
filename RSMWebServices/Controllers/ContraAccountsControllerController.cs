@@ -28,20 +28,38 @@ namespace RSMWebServices.Controllers
         [HttpPost]
         public IActionResult CorrectionByPeriod(CorrectionJournalEntriesParams entriesParams)
         {
-            CorrectionLogic logic = new CorrectionLogic(_appSettings.SqlServerHostName, 10, _appSettings.SapUserName, _appSettings.SapPassword, _appSettings.SqlServerCatalog);
+            try
+            {
+                CorrectionLogic logic = new CorrectionLogic(_appSettings.SqlServerHostName,
+                    int.Parse(_appSettings.DbServerType),
+                    _appSettings.SapUserName,
+                    _appSettings.SapPassword,
+                    _appSettings.SqlServerCatalog);
 
-            logic.CorrectionJournalEntries(entriesParams);
-            logic.CorrectionJournalEntriesSecondLogic(entriesParams);
-            return Ok();
+                logic.CorrectionJournalEntries(entriesParams);
+                logic.CorrectionJournalEntriesSecondLogic(entriesParams);
+            }
+            catch (Exception e)
+            {
+                return UnprocessableEntity(e.Message);
+            }
+            return Accepted();
         }
         [ActionName("CorrectionByTranId")]
         [HttpPost]
         public IActionResult CorrectionById(string tranId)
         {
-            CorrectionLogic logic = new CorrectionLogic(_appSettings.SqlServerHostName, 10, _appSettings.SapUserName, _appSettings.SapPassword, _appSettings.SqlServerCatalog);
-            logic.CorrectionJournalEntries(tranId);
-            logic.CorrectionJournalEntriesSecondLogic(tranId, 120);
-            return Ok();
+            try
+            {
+                CorrectionLogic logic = new CorrectionLogic(_appSettings.SqlServerHostName, int.Parse(_appSettings.DbServerType), _appSettings.SapUserName, _appSettings.SapPassword, _appSettings.SqlServerCatalog);
+                logic.CorrectionJournalEntries(tranId);
+                logic.CorrectionJournalEntriesSecondLogic(tranId, 120);
+            }
+            catch (Exception e)
+            {
+                return UnprocessableEntity(e.Message);
+            }
+            return Accepted();
         }
 
         [ActionName("CorrectionByPeriodRecuring")]

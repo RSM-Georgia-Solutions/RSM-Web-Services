@@ -13,6 +13,7 @@ namespace RSMWebServices.Helpers
         public string SqlServerUser { get; set; }
         public string SqlServerPassword { get; set; }
         public string SapUserName { get; set; }
+        public string DbServerType { get; set; }
         public string SapPassword { get; set; }
     }
 }
