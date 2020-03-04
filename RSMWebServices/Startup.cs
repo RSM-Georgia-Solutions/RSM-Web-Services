@@ -70,7 +70,10 @@ namespace RSMWebServices
             });
 
             app.UseHangfireServer();
-            app.UseHangfireDashboard("/hangfire", new DashboardOptions());
+            app.UseHangfireDashboard("/hangfire", new DashboardOptions
+            {
+                Authorization = new [] {new MyAuthorizationFilter()}
+            });
 
             app.UseHttpsRedirection();
             app.UseMvc();
