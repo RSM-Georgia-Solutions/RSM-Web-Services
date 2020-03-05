@@ -15,11 +15,11 @@ namespace RSMWebServices.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class ContraAccountsControllerController : ControllerBase
+    public class ContraAccountsController : ControllerBase
     {
 
         private readonly AppSettings _appSettings;
-        public ContraAccountsControllerController(AppSettings appSettings)
+        public ContraAccountsController(AppSettings appSettings)
         {
             _appSettings = appSettings;
         }

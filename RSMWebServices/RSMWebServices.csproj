@@ -25,6 +25,8 @@
     <Reference Include="CorrectContraAccountLogicDLL">
       <HintPath>..\..\CorrectContraAccountLogicDLL\CorrectContraAccountLogicDLL\bin\Release\netstandard2.0\CorrectContraAccountLogicDLL.dll</HintPath>
     </Reference>
+    <Reference Include="ExcelHelper">
+      <HintPath>..\..\..\..\Downloads\ExcelHelper.dll</HintPath>
+    </Reference>
   </ItemGroup>
-
 </Project>

@@ -15,5 +15,7 @@ namespace RSMWebServices.Helpers
         public string SapUserName { get; set; }
         public string DbServerType { get; set; }
         public string SapPassword { get; set; }
+        public string SourceLocationForExcelFile { get; set; }
+        public string TargetLocationForExcelFile { get; set; }
     }
 }
