@@ -15,18 +15,11 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="RSM-ExcelHelper" Version="25.25.25.25" />
+    <PackageReference Include="RSMCorrectContraAccountLogicDLL" Version="1.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.0.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="CorrectContraAccountLogicDLL">
-      <HintPath>..\..\CorrectContraAccountLogicDLL\CorrectContraAccountLogicDLL\bin\Release\netstandard2.0\CorrectContraAccountLogicDLL.dll</HintPath>
-    </Reference>
-    <Reference Include="ExcelHelper">
-      <HintPath>..\..\..\..\Downloads\ExcelHelper.dll</HintPath>
-    </Reference>
   </ItemGroup>
 </Project>
