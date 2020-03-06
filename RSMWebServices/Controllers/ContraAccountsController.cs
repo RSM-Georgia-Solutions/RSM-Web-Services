@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using CorrectContraAccountLogicDLL;
 using Hangfire;
-using Microsoft.Extensions.Configuration;
 using RSMWebServices.Helpers;
-using static System.Configuration.ConfigurationSettings;
 
 namespace RSMWebServices.Controllers
 {
