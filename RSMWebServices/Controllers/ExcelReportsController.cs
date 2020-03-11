@@ -22,7 +22,7 @@ namespace RSMWebServices.Controllers
         {
             Helper helper = new Helper();
             helper.RefreshFile(_appSettings.SourceLocationForExcelFile);
-            helper.GetAndSave(_appSettings.SourceLocationForExcelFile, _appSettings.TargetLocationForExcelFile);
+            helper.GenerateReadOnlyFile(_appSettings.SourceLocationForExcelFile, _appSettings.TargetLocationForExcelFile);
             return Ok();
         }
         [ActionName("CreateReportFromPath")]
@@ -31,7 +31,7 @@ namespace RSMWebServices.Controllers
         {
             Helper helper = new Helper();
             helper.RefreshFile(sourceLocation);
-            helper.GetAndSave(sourceLocation, targetLocation);
+            helper.GenerateReadOnlyFile(sourceLocation, targetLocation);
             return Ok();
         }
         [ActionName("CreateRecuringReport")]
